@@ -106,7 +106,7 @@ function ArtSection() {
 										alt="codepen"
 									/>
 								</motion.div>
-								<img src={work.imgUrl} alt={work.name} />
+								<img loading="lazy" src={work.imgUrl} alt={work.name} />
 							</motion.div>
 						</a>
 						<motion.div
