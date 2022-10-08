@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+:root {
+	background-color: #130143;
+	font-family: "Poppins", sans-serif;
+	--app-gradient: radial-gradient(circle at 45% 90%, #130143 0%, #02040e 100%);
+	--white-color: #ffffff;
+	--dim-white: rgba(250, 250, 250, 0.6);
+	/* --primarybg: #02040e; */
+	--primarybg: #060b27;
+	--secondarybg: #130143;
+}
+.lock-scroll {
+	height: 100vh;
+	overflow: hidden;
+	touch-action: none;
+}

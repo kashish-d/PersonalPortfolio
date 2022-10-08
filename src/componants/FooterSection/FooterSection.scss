@@ -1,0 +1,67 @@
+.app__footer {
+	background: var(--primarybg);
+	padding: 3rem;
+	p {
+		font-size: 1rem;
+		text-align: center;
+	}
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 4rem;
+	}
+}
+.app__footer-links {
+	width: 45%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 2rem auto;
+	flex-wrap: wrap;
+	a {
+		height: 3rem;
+		width: 7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// border: 1px solid;
+		margin: 0.5rem;
+		font-size: 1.2rem;
+		text-decoration: none;
+		color: var(--dim-white);
+	}
+	@media screen and (max-width: 1000px) {
+		width: 80%;
+	}
+	@media screen and (max-width: 500px) {
+		width: 100%;
+	}
+}
+.app__footer-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+	a {
+		text-decoration: none;
+		font-size: 1rem;
+		color: var(--white-color);
+		margin-left: 0.5rem;
+	}
+}
+.app__footer-mail {
+	color: var(--dim-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	.app__footer-mail-copy {
+		height: 22px;
+		width: 22px;
+		filter: invert(0.8);
+		cursor: pointer;
+	}
+}

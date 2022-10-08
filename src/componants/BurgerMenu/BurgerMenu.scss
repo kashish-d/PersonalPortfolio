@@ -1,0 +1,110 @@
+.app__burger {
+	display: none;
+	@media screen and (max-width: 768px) {
+		display: block;
+	}
+}
+.app__burger-menu {
+	padding: 1rem;
+	cursor: pointer;
+	z-index: 10;
+	position: relative;
+	.line {
+		height: 4px;
+		width: 25px;
+		background-color: var(--white-color);
+		margin-bottom: 4px;
+		transition: transform 0.3s cubic-bezier(0, -0.06, 0.15, 1.34);
+		// transition: all 0.3s ease-in;
+		cursor: pointer;
+	}
+	&.active {
+		& + .app__burger-sidebar-parent {
+			display: block;
+		}
+		& ~ .app__burger-sidebar {
+			box-shadow: -4px -4px 10px black;
+			transform: translateX(0%);
+		}
+	}
+}
+
+.app__burger-sidebar-parent {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100vh;
+	width: 100%;
+	user-select: none;
+	display: none;
+	// pointer-events: none;
+	transition: all 0.3s ease-in-out;
+	backdrop-filter: blur(50px);
+}
+
+.app__burger-sidebar {
+	z-index: 3;
+	height: 100vh;
+	opacity: 0.99;
+	background: var(--app-gradient);
+	width: 75%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translateX(100%);
+	transition: all 0.35s cubic-bezier(0.75, -0.03, 0, 1.07);
+	padding: 6rem 1.2rem 1.2rem;
+
+	& > div {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.app__burger-links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		// border: 1px solid;
+		list-style: none;
+
+		.app__burger-link {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			// border: 1px solid;
+			margin: 2rem;
+
+			div {
+				height: 6px;
+				width: 6px;
+				border-radius: 150px;
+				// background-color: #0e268a;
+				background-color: transparent;
+				opacity: 9;
+				transform: translateY(5px);
+				margin-top: 5px;
+			}
+
+			a {
+				text-decoration: none;
+				color: var(--dim-white);
+				text-transform: capitalize;
+				font-size: 1.5rem;
+				text-shadow: 2px 2px 4px black;
+			}
+			&.active {
+				a {
+					color: var(--white-color);
+				}
+				div {
+					opacity: 1;
+					background-color: var(--white-color);
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}

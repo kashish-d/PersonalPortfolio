@@ -1,0 +1,172 @@
+:root {
+	--btn-width: 50%;
+	--btn-height: 60px;
+	--btn-squish-animation: 500ms;
+	--btn-progress-animation: 1800ms;
+	--circle-animation: 300ms;
+	--checkmark-animation: 300ms;
+	--btn-progressComplete-animation: 210ms;
+}
+
+.btn-container {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// border: 1px solid;
+}
+
+.btn {
+	position: relative;
+	height: var(--btn-height);
+	width: var(--btn-width);
+	font-size: 1.2rem;
+	align-self: center;
+	background-color: var(--primarybg);
+	border: none;
+	color: #fff;
+	border-radius: 0.4em;
+	max-width: 220px;
+
+	&.animation {
+		background-color: transparent;
+		color: transparent;
+		cursor: default;
+		user-select: none;
+		pointer-events: none;
+
+		&.complete {
+			animation: hide 0ms var(--btn-progressComplete-animation) forwards;
+
+			&::after {
+				animation: progressComplete 400ms ease-in forwards;
+			}
+		}
+
+		&::before {
+			display: block;
+			animation: squish var(--btn-squish-animation) forwards
+				cubic-bezier(0, -0.06, 0.3, 1.87);
+		}
+		&::after {
+			display: block;
+			animation: progress var(--btn-progress-animation)
+				var(--btn-squish-animation) forwards ease-out;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--primarybg);
+		border-radius: 0.4em;
+		display: none;
+	}
+	&::after {
+		content: "";
+		display: none;
+		position: absolute;
+		inset: 0;
+		background-color: #424c89f8;
+		top: 35.5%;
+		bottom: 35.5%;
+		border-radius: 0.4em;
+		left: 51%;
+		right: 51%;
+	}
+}
+
+.btn.animation.complete + .svg-container {
+	height: 0;
+	width: 0;
+	border-radius: 0.4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	animation: circle var(--circle-animation)
+		var(--btn-progressComplete-animation) forwards
+		cubic-bezier(0, -0.06, 0.15, 1.34);
+
+	&.error {
+		animation: circleError var(--circle-animation)
+			var(--btn-progressComplete-animation) forwards
+			cubic-bezier(0, -0.06, 0.15, 1.34);
+	}
+
+	& > .checkmark-svg {
+		stroke: white;
+		width: 27px;
+		stroke-width: 3px;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-dashoffset: 40.84104919433594;
+		stroke-dasharray: 40.84104919433594;
+		animation: checkmark var(--checkmark-animation)
+			calc(var(--btn-progressComplete-animation) + var(--circle-animation))
+			forwards;
+	}
+}
+
+@keyframes squish {
+	100% {
+		left: -45%;
+		right: -45%;
+		top: 35%;
+		bottom: 35%;
+	}
+}
+
+@keyframes progress {
+	100% {
+		left: -30%;
+		right: -30%;
+	}
+}
+@keyframes progressComplete {
+	0% {
+		left: -30.1%;
+		right: -30.1%;
+	}
+	100% {
+		left: -45%;
+		right: -45%;
+	}
+}
+@keyframes hide {
+	100% {
+		height: 0px;
+		width: 0px;
+	}
+}
+// look at top+bottom in squish, how much we reduced its height and width
+@keyframes circle {
+	0% {
+		height: calc(var(--btn-height) * 0.3);
+		width: calc(var(--btn-width) * 1.9);
+	}
+	100% {
+		background-color: aquamarine;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+	}
+}
+@keyframes circleError {
+	0% {
+		height: calc(var(--btn-height) * 0.3);
+		width: calc(var(--btn-width) * 1.9);
+	}
+	100% {
+		background-color: red;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+	}
+}
+
+@keyframes checkmark {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}

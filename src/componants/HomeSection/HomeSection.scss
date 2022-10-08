@@ -1,0 +1,119 @@
+.app__home {
+	min-height: 100vh;
+	// height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex: 1;
+	// padding: 2rem;
+	padding: 4rem 2rem 5rem;
+	flex-wrap: wrap;
+	background: var(--app-gradient);
+
+	@media screen and (max-width: 970px) {
+		padding: 4rem 1.5rem 5rem;
+	}
+}
+
+.app__home-introtext {
+	margin-top: 4rem;
+
+	@media screen and (max-width: 970px) {
+		margin-top: 7rem;
+	}
+
+	@media screen and (max-width: 550px) {
+		margin-top: 3rem;
+	}
+	@media screen and (max-width: 400px) {
+		margin-top: 2rem;
+	}
+	h1 {
+		font-size: 6rem;
+		font-weight: 800;
+		text-shadow: 0px 0px 2px #fff;
+		letter-spacing: 5px;
+	}
+	.app__home-name {
+		text-shadow: none;
+		// background: linear-gradient(to right, #4cb8c4, white);
+		background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+		background-clip: text;
+		background-size: 200%;
+		-webkit-text-fill-color: transparent;
+
+		animation: shine 8s linear infinite;
+		@keyframes shine {
+			90% {
+				background-position: 120%;
+			}
+			100% {
+				background-position: 200%;
+			}
+		}
+	}
+	h3 {
+		margin: 0.2rem 0;
+		font-size: 1.8rem;
+		font-weight: 300;
+		color: var(--dim-white);
+		// max-width: 400px;
+	}
+	button {
+		border: none;
+		padding: 1rem 2rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border-radius: 12px;
+		background-color: var(--secondarybg);
+		box-shadow: 2px 2px 5px var(--primarybg);
+		cursor: pointer;
+		a {
+			text-decoration: none;
+			color: #fff;
+			font-size: 1rem;
+		}
+
+		&:active {
+			box-shadow: inset 1px 1px 5px var(--primarybg);
+		}
+	}
+	@media screen and (max-width: 970px) {
+		h1 {
+			font-size: 4rem;
+		}
+	}
+	@media screen and (max-width: 550px) {
+		h1 {
+			font-size: 3.5rem;
+		}
+		h3 {
+			font-size: 1.4rem;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		h1 {
+			font-size: 2.7rem;
+		}
+		h3 {
+			font-size: 1.3rem;
+		}
+		button {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.app__home-introimage {
+	// border: 1px solid;
+	img {
+		height: 70vmin;
+		filter: drop-shadow(2px 2px 10px var(--primarybg));
+		animation: floating 1.5s 2s ease-in-out infinite alternate;
+
+		margin: 3rem 0;
+		@media screen and (max-width: 500px) {
+			margin: 3rem 0 1rem;
+		}
+	}
+}

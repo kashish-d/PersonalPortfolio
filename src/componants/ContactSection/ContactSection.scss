@@ -1,0 +1,125 @@
+.app__contact {
+	background: linear-gradient(to top, var(--secondarybg), var(--primarybg));
+	padding: 10rem 2rem 6rem;
+	@media screen and (max-width: 500px) {
+		padding: 7rem 1rem 4rem;
+	}
+	// padding-top: 10rem;
+}
+.app__contact-heading {
+	margin-bottom: 7rem;
+	position: relative;
+	text-shadow: 1px 1px 5px black;
+
+	@media screen and (max-width: 500px) {
+		margin-bottom: 7rem;
+	}
+}
+
+.app__contact-headingbg {
+	position: absolute;
+	// top: -50;
+	left: 5rem;
+	font-weight: 600;
+	color: var(--dim-white);
+	opacity: 0.2;
+	bottom: -4.5rem;
+	font-size: 9rem;
+	z-index: 1;
+
+	@media screen and (max-width: 900px) {
+		bottom: -3rem;
+		// transform: translateX(0) !important;
+		left: 0rem;
+	}
+	@media screen and (max-width: 750px) {
+		font-size: 5rem;
+		bottom: -1rem;
+	}
+}
+
+.app__contact-content {
+	justify-content: space-evenly;
+	flex-wrap: wrap-reverse;
+	flex: 1;
+	// border: 1px solid;
+	.app__contact-img {
+		height: 300px;
+		margin-left: 1rem;
+		margin-bottom: 7rem;
+		animation: floating 1.5s 2s ease-in-out infinite alternate;
+		// border: 1px solid;
+
+		@media screen and (max-width: 600px) {
+			height: 250px;
+		}
+		@media screen and (max-width: 450px) {
+			height: 200px;
+		}
+		@media screen and (max-width: 350px) {
+			height: 150px;
+		}
+	}
+}
+
+.app__contact-form {
+	min-width: 300px;
+	width: 60%;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// flex-direction: column;
+	// margin-top: 3rem;
+	// border: 1px solid;
+	padding: 0rem 2rem 0.5rem;
+
+	& > div {
+		// border: 1px solid;
+		display: flex;
+		flex-direction: column;
+		max-width: 600px;
+	}
+
+	@media screen and (max-width: 1000px) {
+		width: 80%;
+	}
+	@media screen and (max-width: 500px) {
+		width: 100%;
+	}
+	.app__contact-row {
+		// width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		margin-bottom: 2rem;
+		label {
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+		input,
+		textarea {
+			outline: 2px solid var(--secondarybg);
+			border: none;
+			padding: 1rem;
+			width: 100%;
+			border-radius: 10px;
+			font-size: 1rem;
+			font-family: sans-serif;
+		}
+	}
+}
+
+.app__contact-success-alert {
+	text-align: center;
+}
+.app__contact-mail {
+	font-size: 1rem;
+	img {
+		margin-left: 5px;
+		height: 15px;
+		// width: 10px;
+		filter: invert(1);
+		cursor: pointer;
+	}
+}
