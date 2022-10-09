@@ -71,6 +71,7 @@ const artHoverLinkVariants = {
 };
 
 function ArtSection() {
+	// const [loaded,setLoaded] =
 	const { scrollYProgress } = useScroll();
 	const translateX = useTransform(scrollYProgress, [0, 1], [-300, 100]);
 
@@ -106,7 +107,13 @@ function ArtSection() {
 										alt="codepen"
 									/>
 								</motion.div>
-								<img loading="lazy" src={work.imgUrl} alt={work.name} />
+								<img
+									onLoad={() => {
+										console.log("loaded");
+									}}
+									src={work.imgUrl}
+									alt={work.name}
+								/>
 							</motion.div>
 						</a>
 						<motion.div

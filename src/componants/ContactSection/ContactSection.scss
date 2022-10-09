@@ -43,22 +43,15 @@
 	flex-wrap: wrap-reverse;
 	flex: 1;
 	// border: 1px solid;
-	.app__contact-img {
-		height: 300px;
-		margin-left: 1rem;
-		margin-bottom: 7rem;
-		animation: floating 1.5s 2s ease-in-out infinite alternate;
-		// border: 1px solid;
 
-		@media screen and (max-width: 600px) {
-			height: 250px;
-		}
-		@media screen and (max-width: 450px) {
-			height: 200px;
-		}
-		@media screen and (max-width: 350px) {
-			height: 150px;
-		}
+	.app__contact-img-container {
+		width: 50vmin;
+		margin-bottom: 7rem;
+	}
+	.app__contact-img {
+		width: 100%;
+		margin-left: 1rem;
+		animation: floating 1.5s 2s ease-in-out infinite alternate;
 	}
 }
 

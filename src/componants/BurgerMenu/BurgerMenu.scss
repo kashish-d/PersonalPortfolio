@@ -44,7 +44,8 @@
 
 .app__burger-sidebar {
 	z-index: 3;
-	height: 100vh;
+	min-height: 100vh;
+	height: 100%;
 	opacity: 0.99;
 	background: var(--app-gradient);
 	width: 75%;

@@ -176,15 +176,17 @@ function ContactSection() {
 						/>
 					</div>
 				</motion.form>
-				<motion.img
-					className="app__contact-img"
-					variants={imgVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 1 }}
-					src={images.peaceMan}
-					alt="peace man"
-				/>
+				<div className="app__contact-img-container">
+					<motion.img
+						className="app__contact-img"
+						variants={imgVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 1 }}
+						src={images.peaceMan}
+						alt="peace man"
+					/>
+				</div>
 			</div>
 		</div>
 	);

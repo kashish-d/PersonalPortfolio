@@ -16,13 +16,14 @@ const containerVariants = {
 const introtextVariants = {
 	hidden: {
 		opacity: 0,
-		y: 40,
+		y: 50,
 	},
 	visible: {
 		opacity: 1,
 		y: 0,
 		transition: {
 			duration: 1,
+			delay: 0.5,
 		},
 	},
 };
@@ -72,7 +73,7 @@ function HomeSection() {
 				<motion.h3 variants={introDesigVariants}>
 					An Interactive Front-End Developer
 				</motion.h3>
-				<motion.button whileHover={{ scale: 1.1 }}>
+				<motion.button variants={introtextVariants} whileHover={{ scale: 1.1 }}>
 					<a href="/Resume.pdf" target="_blank" rel="noreferrer noopener">
 						Resume
 					</a>
