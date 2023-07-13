@@ -1,7 +1,6 @@
 // Refactor it somehow with refs for react
 
 function scrollSpy() {
-	console.log("Hey");
 	window.addEventListener("scroll", () => {
 		const sections = document.querySelectorAll(".section");
 		const navLinks = document.querySelectorAll(".app__nav-link");

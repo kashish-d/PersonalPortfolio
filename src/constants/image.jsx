@@ -19,6 +19,8 @@ import github from "../assets/github.png";
 import monitor from "../assets/monitor.png";
 import external from "../assets/external.png";
 import codepen from "../assets/codepen.png";
+import interactopia from "../assets/Interactopia.png";
+import elevate from "../assets/Elevate.png";
 
 // eslint-disable-next-line
 export default {
@@ -43,4 +45,6 @@ export default {
 	monitor,
 	external,
 	codepen,
+	interactopia,
+	elevate,
 };

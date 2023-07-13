@@ -36,14 +36,14 @@ function AboutSection() {
 				>
 					<p>
 						Hello 👋, My name is Kashish and I enjoy making things that live on
-						the web. My interest in web development started back in 2nd year of
-						College. Once I started, I just knew that I wanted to keep doing
-						this.
+						the web. My interest in Software development started back in 2nd
+						year of College. Once I started, I just knew that I wanted to keep
+						doing this.
 					</p>
 					<p>
 						I like to create interactive user interfaces, poke around at the
-						backend and develop rich web experiences and web applications. When
-						not working, I play games. Actually for hire.
+						backend and develop rich user experiences and applications. When not
+						working, I play games. Actually for hire.
 					</p>
 				</motion.div>
 				<motion.div

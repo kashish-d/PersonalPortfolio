@@ -126,7 +126,7 @@ function FooterSection() {
 				</a>
 			</div>
 			<div className="app__footer-info">
-				<p>© 2022 Kashish Dhingra</p>
+				<p>© 2023 Kashish Dhingra</p>
 				<p className="app__footer-mail">
 					kashishdhingra64@gmail.com
 					{copied ? (
